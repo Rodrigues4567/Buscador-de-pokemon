@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import './App.css'
-import axios from 'axios'
+import api from './services/api'
 import PokemonSection from './components/pokemon-section'
 
 function App() {
@@ -11,19 +11,19 @@ function App() {
   async function pokemon() {
     const valorInput = inputRef.current.value
 
-    const url = `https://pokeapi.co/api/v2/pokemon/${valorInput}`
-
     if (!valorInput) {
-      alert('Digite um input válido!')
+      alert('Digite um nome válido!')
       return
     }
 
     try {
-      const res = await axios.get(url)
+      const res = await api.get(`pokemon/${valorInput}/`)
       console.log(res.data)
+      console.log(res.data.abilities)
       setShowPokemon(() => res.data)
     }
     catch (erro) {
+      alert('Pokemon não encontrado!')
       console.log(erro)
     }
   }
