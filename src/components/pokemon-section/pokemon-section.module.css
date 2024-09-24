@@ -1,3 +1,36 @@
 .container {
-    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img img {
+    height: 150px;
+    margin-bottom: 5px;
+}
+
+.pokemon_status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.1rem;
+    padding: 1rem;
+    width: 80vw;
+    border-radius: 1rem;
+    background-color: rgb(228, 32, 32);
+    color: #f0f0f0;
+}
+
+.pokemon_name, 
+.pokemon_type, 
+.pokemon_abilities {
+    text-align: center;
+}
+
+.pokemon_name p, 
+.pokemon_type p, 
+.pokemon_abilities p {
+    font-size: 18px;
 }

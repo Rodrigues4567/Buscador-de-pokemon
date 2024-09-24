@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import './App.css'
 import api from './services/api'
 import PokemonSection from './components/pokemon-section'
+import Inputs from './components/inputs'
 
 function App() {
 
@@ -30,10 +31,7 @@ function App() {
 
   return (
     <div>
-      <h1>Qual seu Pokemon?</h1>
-      <input ref={inputRef} type="text" placeholder='Nome do Pokemon' />
-      <button onClick={pokemon}>Buscar</button>
-
+      <Inputs referencia={inputRef} onClicka={pokemon} />
       {showPokemon && <PokemonSection selected_pokemon={showPokemon} />}
     </div>
   )
