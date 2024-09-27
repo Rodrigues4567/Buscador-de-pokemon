@@ -10,7 +10,7 @@ function App() {
   const [showPokemon, setShowPokemon] = useState()
 
   async function pokemon() {
-    const valorInput = inputRef.current.value
+    const valorInput = inputRef.current.value.toLowerCase()
 
     if (!valorInput) {
       alert('Digite um nome válido!')
