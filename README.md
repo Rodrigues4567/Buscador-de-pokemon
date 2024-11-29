@@ -1,4 +1,4 @@
-# Pokedex (Digite seu pokemon)
+# Buscador de Pokemons
 O projeto consiste em uma página onde o usuário irá digitar o nome de determinado Pokémon no input e como resultado será exibido os status do Pokémon informado.
 
 ## Como funciona
